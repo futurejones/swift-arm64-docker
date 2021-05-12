@@ -23,12 +23,13 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     zlib1g-dev \
     && rm -r /var/lib/apt/lists/*
 
+ARG SIGNING_KEY=D584E1710E48C09EEF94F463275C60777807339A
 ARG PACKAGE_NAME=swiftlang-5.4-debian-10-release-aarch64-3-2021-04-26.tar.gz
-
 ARG RELEASE_TAG=v5.4-RELEASE-2
 ARG SWIFT_WEBROOT=https://github.com/futurejones/swift-arm64/releases/download/
 
-ENV PACKAGE_NAME=$PACKAGE_NAME \
+ENV SIGNING_KEY=$SIGNING_KEY \
+    PACKAGE_NAME=$PACKAGE_NAME \
     RELEASE_TAG=$RELEASE_TAG \
     SWIFT_WEBROOT=$SWIFT_WEBROOT
 
@@ -41,7 +42,7 @@ RUN set -e; \
     && apt-get -q update && apt-get -q install -y curl && rm -rf /var/lib/apt/lists/* \
     # - Download the Swift toolchain
     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig \
-    && gpg --batch --quiet --auto-key-locate keyserver --locate-keys keys@swift-arm.com \
+    && gpg --batch --quiet --keyserver hkp://keyserver.ubuntu.com:80 --recv $SIGNING_KEY \
     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz \
     # - Unpack the toolchain, set libs permissions, and clean up.
     && tar -xzf swift.tar.gz --directory / \
