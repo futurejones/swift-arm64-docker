@@ -1,5 +1,5 @@
 # Debian Buster 10
-# Swift 5.4.0 Release
+# Swift 5.4.1 Release
 FROM debian:10
 LABEL maintainer="Swift on Arm <docker@swift-arm.com>"
 LABEL description="Docker Container for the Swift programming language"
@@ -24,8 +24,8 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     && rm -r /var/lib/apt/lists/*
 
 ARG SIGNING_KEY=D584E1710E48C09EEF94F463275C60777807339A
-ARG PACKAGE_NAME=swiftlang-5.4-debian-10-release-aarch64-3-2021-04-26.tar.gz
-ARG RELEASE_TAG=v5.4-RELEASE-2
+ARG PACKAGE_NAME=swiftlang-5.4.1-debian-10-release-aarch64-8-2021-05-27.tar.gz
+ARG RELEASE_TAG=v5.4.1-RELEASE
 ARG SWIFT_WEBROOT=https://github.com/futurejones/swift-arm64/releases/download/
 
 ENV SIGNING_KEY=$SIGNING_KEY \

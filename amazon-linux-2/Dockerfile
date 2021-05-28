@@ -1,5 +1,5 @@
 # Amazon Linux 2
-# Swift 5.4.0 Release
+# Swift 5.4.1 Release
 FROM amazonlinux:2
 LABEL maintainer="Swift on Arm <docker@swift-arm.com>"
 LABEL description="Docker Container for the Swift programming language"
@@ -26,8 +26,8 @@ RUN yum -y install \
   zlib-devel
 
 ARG SIGNING_KEY=D584E1710E48C09EEF94F463275C60777807339A
-ARG PACKAGE_NAME=swiftlang-5.4-amazon-linux-2-release-aarch64-3-2021-05-13.tar.gz
-ARG RELEASE_TAG=v5.4-RELEASE-2
+ARG PACKAGE_NAME=swiftlang-5.4.1-amazon-linux-2-release-aarch64-7-2021-05-28.tar.gz
+ARG RELEASE_TAG=v5.4.1-RELEASE
 ARG SWIFT_WEBROOT=https://github.com/futurejones/swift-arm64/releases/download/
 
 ENV SIGNING_KEY=$SIGNING_KEY \
