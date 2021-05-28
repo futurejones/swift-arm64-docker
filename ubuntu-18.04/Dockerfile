@@ -24,7 +24,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     && rm -r /var/lib/apt/lists/*
 
 ARG SIGNING_KEY=D584E1710E48C09EEF94F463275C60777807339A
-ARG PACKAGE_NAME=sswiftlang-5.4.1-ubuntu-18.04-release-aarch64-7-2021-05-27.tar.gz
+ARG PACKAGE_NAME=swiftlang-5.4.1-ubuntu-18.04-release-aarch64-7-2021-05-27.tar.gz
 ARG RELEASE_TAG=v5.4.1-RELEASE
 ARG SWIFT_WEBROOT=https://github.com/futurejones/swift-arm64/releases/download/
 
