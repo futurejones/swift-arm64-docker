@@ -24,5 +24,7 @@ RUN set -e; \
     && apt-get purge --auto-remove -y wget \
     && rm -r /var/lib/apt/lists/*
 
-# Print Installed Swift Version
-RUN swift --version
+# Test Installed Swift Version
+RUN mkdir hello && cd hello && swift package init --type executable && swift run && swift test && swift --version
+# Remove test
+RUN rm -rf hello
