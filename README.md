@@ -29,9 +29,16 @@ docker run --security-opt seccomp=unconfined -it swiftarm/swift
 ```
 
 ### [Image Tags Available](https://hub.docker.com/repository/docker/swiftarm/swift)
-* latest (ubuntu 20.04 swift 5.4)
-* 5.4.0-debian-10
-* 5.4.0-ubuntu-18.04
-* 5.4.0-ubuntu-20.04
-* 5.4.0-ubuntu-20.10
-* 5.4.0-ubuntu-21.04
+* latest (ubuntu 20.04 swift 5.5.1)
+* 5.5.1-debian-10
+* 5.5.1-debian-buster
+* 5.5.1-debian-11
+* 5.5.1-debian-bullseye
+* 5.5.1-ubuntu-18.04
+* 5.5.1-ubuntu-bionic
+* 5.5.1-ubuntu-20.04
+* 5.5.1-ubuntu-focal
+* 5.5.1-ubuntu-21.04
+* 5.5.1-ubuntu-hirsute
+* 5.5.1-ubuntu-21.10
+* 5.5.1-ubuntu-impish
