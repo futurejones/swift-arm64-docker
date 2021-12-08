@@ -10,7 +10,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
 
 ARG PACKAGE_NAME=swiftlang-slim_5.5.1-01-debian-bullseye_arm64.deb
 ARG RELEASE_TAG=v5.5.1-RELEASE
-ARG SWIFT_WEBROOT=https://archive.swiftlang.xyz/repos/debian/pool/v5_5/s/swiftlang-slim
+ARG SWIFT_WEBROOT=https://archive.swiftlang.xyz/repos/debian/pool/main/s/swiftlang-slim
 
 RUN set -e; \
     SWIFT_BIN_URL="$SWIFT_WEBROOT/$PACKAGE_NAME" \
