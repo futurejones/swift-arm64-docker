@@ -18,6 +18,7 @@ RUN set -e; \
     && wget "$SWIFT_BIN_URL" \
     # - install swift
     && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get -q update \
     && apt-get -q install -y ./"$PACKAGE_NAME" \
     # - clean up.
     && rm -rf "$PACKAGE_NAME" \
