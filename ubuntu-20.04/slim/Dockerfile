@@ -23,6 +23,3 @@ RUN set -e; \
     && rm -rf "$PACKAGE_NAME" \
     && apt-get purge --auto-remove -y wget \
     && rm -r /var/lib/apt/lists/*
-
-# Print Installed Swift Version
-RUN swift --version
