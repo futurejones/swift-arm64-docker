@@ -8,7 +8,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     apt-get -q install -y \
     wget
 
-ARG PACKAGE_NAME=swiftlang-slim_5.5.1-01-debian-bullseye_arm64.deb
+ARG PACKAGE_NAME=swiftlang-slim_5.5.1-02-debian-bullseye_arm64.deb
 ARG RELEASE_TAG=v5.5.1-RELEASE
 ARG SWIFT_WEBROOT=https://archive.swiftlang.xyz/repos/debian/pool/main/s/swiftlang-slim
 
