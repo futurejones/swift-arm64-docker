@@ -1,5 +1,5 @@
 # Ubuntu Hirsute 21.04
-# Swift 5.5.1 Release
+# Swift 5.5.2 Release
 FROM ubuntu:21.04
 LABEL maintainer="Swift on Arm <docker@swift-arm.com>"
 LABEL description="Docker Container for the Swift programming language"
@@ -8,9 +8,9 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     apt-get -q install -y \
     wget
 
-ARG PACKAGE_NAME=swiftlang_5.5.1-01-ubuntu-hirsute_arm64.deb
-ARG RELEASE_TAG=v5.5.1-RELEASE
-ARG SWIFT_WEBROOT=https://archive.swiftlang.xyz/repos/ubuntu/pool/v5_5/s/swiftlang
+ARG PACKAGE_NAME=swiftlang_5.5.2-01-ubuntu-hirsute_arm64.deb
+ARG RELEASE_TAG=v5.5.2-RELEASE
+ARG SWIFT_WEBROOT=https://archive.swiftlang.xyz/repos/ubuntu/pool/main/s/swiftlang
 
 RUN set -e; \
     SWIFT_BIN_URL="$SWIFT_WEBROOT/$PACKAGE_NAME" \
