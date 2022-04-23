@@ -1,5 +1,5 @@
 # Ubuntu Bionic 18.04
-# Swift 5.5.2 Release
+# Swift 5.6.1 Release
 FROM ubuntu:18.04
 LABEL maintainer="Swift on Arm <docker@swift-arm.com>"
 LABEL description="Docker Container for the Swift programming language"
@@ -8,8 +8,8 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     apt-get -q install -y \
     wget
 
-ARG PACKAGE_NAME=swiftlang_5.5.2-01-ubuntu-bionic_arm64.deb
-ARG RELEASE_TAG=v5.5.2-RELEASE
+ARG PACKAGE_NAME=swiftlang_5.6.1-01-ubuntu-bionic_arm64.deb
+ARG RELEASE_TAG=v5.6.1-RELEASE
 ARG SWIFT_WEBROOT=https://archive.swiftlang.xyz/repos/ubuntu/pool/main/s/swiftlang
 
 RUN set -e; \
